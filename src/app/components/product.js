@@ -2,7 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 export class Product extends React.Component {
+
+	constructor(props) {
+    super(props);
+
+     this.handleUpVote = this.handleUpVote.bind(this);
+    }
+	handleUpVote() {
+		this.props.onVote(this.props.id);
+	}
 	render() {
+
 		return(
 	       <div className="row">
 	        <div>
@@ -10,7 +20,7 @@ export class Product extends React.Component {
 	        </div>
 	        <div className="col-sm-8">
 	          <div>
-	            <a>
+	            <a onClick={this.handleUpVote}>
 	              <i className="fa fa-caret-up" />
 	            </a>
 	            {this.props.votes}
