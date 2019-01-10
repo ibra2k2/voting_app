@@ -1,2 +1,2 @@
 # voting_app
-voting app using reactjs and bootstrap
+voting app using Reactjs and Bootstrap
